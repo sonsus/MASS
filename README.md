@@ -1,3 +1,5 @@
+### Im testing this on Titan Xp which does not supports fp16 mixed precision computation (have no tensor core) -- apex requires this 
+
 # MASS
 <!---
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mass-masked-sequence-to-sequence-pre-training/unsupervised-machine-translation-on-wmt2014-2)](https://paperswithcode.com/sota/unsupervised-machine-translation-on-wmt2014-2?p=mass-masked-sequence-to-sequence-pre-training)
@@ -366,6 +368,7 @@ Evaluated by [files2rouge](https://github.com/pltrdy/files2rouge).
 #### Download data
 Our model is trained on Wikipekia + BookCorpus. Here we use wikitext-103 to demonstrate how to process data.
 ```
+cd MASS/MASS-summarization
 wget https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-raw-v1.zip
 unzip wikitext-103-raw-v1.zip
 ```
@@ -373,6 +376,9 @@ unzip wikitext-103-raw-v1.zip
 #### Tokenize corpus
 We use wordpiece vocabuary (from bert) to tokenize the original text data directly. We provide a [script](MASS-summarization/encode.py) to deal with data. You need to `pip install pytorch_transformers` first to generate tokenized data. 
 ```
+# at MASS/MASS-summarization
+pip install transformers 
+sed -i 's/pytorch_transformers/transformers/g' encode.py
 mkdir -p mono
 for SPLIT in train valid test; do 
     python encode.py \
