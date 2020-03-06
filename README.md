@@ -1,4 +1,9 @@
 ### Im testing this on Titan Xp which does not supports fp16 mixed precision computation (have no tensor core) -- apex requires this 
+after cloning apex repo, install it by
+```bash  
+cd apex  
+python setup.py install
+```
 
 # MASS
 <!---
