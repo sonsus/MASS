@@ -1,10 +1,3 @@
-### Im testing this on Titan Xp which does not supports fp16 mixed precision computation (have no tensor core) -- apex requires this 
-after cloning apex repo, install it by
-```bash  
-cd apex  
-python setup.py install
-```
-
 # MASS
 <!---
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mass-masked-sequence-to-sequence-pre-training/unsupervised-machine-translation-on-wmt2014-2)](https://paperswithcode.com/sota/unsupervised-machine-translation-on-wmt2014-2?p=mass-masked-sequence-to-sequence-pre-training)
@@ -51,6 +44,12 @@ Currently we implement MASS for unsupervised NMT based on the codebase of [XLM](
 - fastBPE (for BPE codes)
 - Moses (for tokenization)
 - Apex (for fp16 training)
+
+after cloning apex repo, install it by
+```bash  
+cd apex  
+python setup.py install
+```
 
 ### Data Ready
 
