@@ -43,7 +43,7 @@ Unsupervised Neural Machine Translation just uses monolingual data to train the 
 
 We are also preparing larger models on more language pairs, and will release them in the future.
 
-### Dependencies
+### Dependencies <--or check here (mar11)
 Currently we implement MASS for unsupervised NMT based on the codebase of [XLM](https://github.com/facebookresearch/XLM). The depencies are as follows:
 - Python 3
 - NumPy
@@ -65,7 +65,7 @@ wget https://dl.fbaipublicfiles.com/XLM/vocab_enfr
 ./get-data-nmt.sh --src en --tgt fr --reload_codes codes_enfr --reload_vocab vocab_enfr
 ```
 
-### Pre-training:
+### Pre-training:  <--do it from here(mar11)
 ```
 python train.py                                      \
 --exp_name unsupMT_enfr                              \
